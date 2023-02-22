@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="weather-container">
+        <div class="wrapper">
+            <div class="weather">
+                <div class="left-block">
+                    <div class="city-name"></div>
+                    <div class="date"></div>
+                    <div class="temp"></div>
+                </div>
     
+                <div class="center-block">
+                    <div class="icon"></div>
+                    <div class="description"></div>
+                </div>
+    
+                <div class="right-block">
+                    <div class="pressure"></div>
+                    <div class="humidity"></div>
+                    <div class="wind">
+                        <div class="speed"></div>
+                        <div class="deg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-title">Select another country:</div>
+        <div class="dropdown-select">
+            <select>
+                <option value="0">Kyiv</option>
+                <option value="1">London</option>
+                <option value="2">Paris</option>
+                <option value="3">Toronto</option>
+                <option value="4">Berlin</option>
+              </select>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
 </body>
+
 </html>
