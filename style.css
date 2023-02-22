@@ -30,6 +30,36 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.loader-cont {
+  display: none;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.loader-cont .loader {
+  margin-left: 280px;
+  margin-top: 150px;
+  border: 10px solid #f9f9f9;
+  border-radius: 50%;
+  border-top: 10px solid #384148;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
 .weather {
   display: flex;
   flex-direction: row;
@@ -37,10 +67,14 @@ body {
   gap: 10px;
   width: 100%;
 }
+.weather .left-block {
+  width: 170px;
+}
 .weather .left-block .city-name {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 500;
   padding-bottom: 30px;
+  text-shadow: 0 0 4px #000;
 }
 .weather .left-block .date {
   display: flex;
@@ -54,7 +88,10 @@ body {
   padding-top: 30px;
   text-align: center;
 }
-.weather .center-block img {
+.weather .center-block .icon {
+  height: 180px;
+}
+.weather .center-block .icon img {
   width: 60%;
   height: auto;
 }
@@ -94,7 +131,6 @@ body {
 .dropdown .dropdown-select {
   width: 130px;
   height: 30px;
-  background: rgba(38, 156, 206, 0.6);
 }
 .dropdown .dropdown-select select {
   width: 100%;

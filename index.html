@@ -18,6 +18,9 @@
 <body>
     <div class="weather-container">
         <div class="wrapper">
+            <div class="loader-cont">
+                <div class="loader"></div>
+            </div>
             <div class="weather">
                 <div class="left-block">
                     <div class="city-name"></div>
@@ -43,14 +46,14 @@
     </div>
 
     <div class="dropdown">
-        <div class="dropdown-title">Select another country:</div>
+        <div class="dropdown-title">Select country:</div>
         <div class="dropdown-select">
-            <select>
-                <option value="0">Kyiv</option>
-                <option value="1">London</option>
-                <option value="2">Paris</option>
-                <option value="3">Toronto</option>
-                <option value="4">Berlin</option>
+            <select class="dropdown-list">
+                <option value="Kyiv">Kyiv</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Sydney">Sydney</option>
               </select>
         </div>
     </div>
