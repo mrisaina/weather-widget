@@ -45,8 +45,12 @@ const displayWeather = (location, i) => {
       city.innerHTML = data.name;
 
       const dateLong = currentDate(i).split(",")[0];
-      const weekdayLong = currentDate(i).split("at")[0].split(",").slice(1);
-      const timeLong = currentDate(i).split("at")[1];
+      const weekdayLong = currentDate(i)
+        .split(",")
+        .slice(1, 3)
+        .join(",")
+        .split("at")[0];
+      const timeLong = currentDate(i).split(",")[2].split("at")[1];
 
       date.innerHTML = `
       <div>${dateLong}</div>
